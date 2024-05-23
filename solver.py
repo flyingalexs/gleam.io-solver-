@@ -15,10 +15,7 @@ def create_task_capmonster(task_payload):
     return requests.post(api_url2 + "createTask", json=task_payload).json()
 def get_balance():
     return requests.post(api_url2+ "getBalance", json={'clientKey': key}).json()['balance']
-# Function to generate a random string
-def generate_random_string(length):
-    characters = string.ascii_letters + string.digits
-    return ''.join(random.choice(characters) for _ in range(length))
+
 
 # Function to get CAPMonster task result
 def get_task_result_capmonster(task_id):
