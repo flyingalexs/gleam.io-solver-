@@ -3,7 +3,8 @@ import re, random
 import tls_client
 from solver import solve
 import hashlib, json
-PROXYADDR = 'http://febtzqio:2jbxbx7yq4ls@38.154.227.167:5868'
+PROXYADDR = 'your proxy'
+SCRAPPEY_KEY = ''
 PROXY = {
     'http': PROXYADDR,
     'https': PROXYADDR
@@ -100,7 +101,7 @@ def fingerprintHash(base):
     hashed = hashlib.md5((base + ("+" if is_bad else "")).encode()).hexdigest()
     return base + "." + hashed
 def cookies() -> dict:
-    main_url = 'https://publisher.scrappey.com/api/v1?key=z9xnsgYmVZZmaiaYGKCDsJXShXrqyjUnIkGSHwHIugVwftijzUJZdsgkSCXE'
+    main_url = f'https://publisher.scrappey.com/api/v1?key={SCRAPPEY_KEY}'
     res = SESSION.post(main_url, json={"cmd": "request.get",
                                         "url": "https://gleam.io/kFm1d/tekken-8-key-giveaway"
                                         })
