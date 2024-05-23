@@ -18,7 +18,7 @@ SESSION = tls_client.Session(
     client_identifier="chrome_120",
     random_tls_extension_order=True
 )
-EMAIL = 'jagrit.soum.il12.34@gmail.com'
+EMAIL = 'ur email'
 CSRF_TOKEN_PATTERN = re.compile(r'<meta name="csrf-token" content="([\w\d\/=\+]*)"')
 ENTRY_METHOD = {
     "id": "7651539",
