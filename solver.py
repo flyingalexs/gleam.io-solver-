@@ -8,7 +8,7 @@ import re
 import coloredlogs
 import logging
 api_url2 = 'https://api.capmonster.cloud/'
-key = 'aa1ceacdb7e6b0f6c1a32cfd0dd43c05'
+key = 'your cmonster key'
 coloredlogs.install(level="INFO")
 logger = logging.getLogger(__name__)
 def create_task_capmonster(task_payload):
